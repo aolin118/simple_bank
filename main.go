@@ -1,5 +1,6 @@
 package main
 
+// add a comment
 import (
 	"database/sql"
 	"log"

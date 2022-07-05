@@ -1,4 +1,4 @@
-name: ci-test
+name: Run Unit Test
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
         # Provide the password for postgres
         env:
           POSTGRES_USER: root
-          POSTGRES_PASSWORD: aolin940118
+          POSTGRES_PASSWORD: secret
           POSTGRES_DB: simple_bank
         # Set health checks to wait until postgres has started
         options: >-

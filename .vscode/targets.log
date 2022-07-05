@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Mon Jul  4 10:08:47 2022
+# Make data base, printed on Tue Jul  5 10:04:03 2022
 
 # Variables
 
@@ -42,7 +42,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/3f/sxr449mn09ndkqlwdlplg6wh0000gn/T/vscode-ipc-a9f090de-30bf-4a05-a84c-575449c99a0c.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/3f/sxr449mn09ndkqlwdlplg6wh0000gn/T/vscode-ipc-87d2ea02-872d-40ba-8c50-39465e1dd276.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -60,7 +60,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Fms32XHNGL/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.1ijw35ulVU/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -148,7 +148,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1157
+VSCODE_PID = 688
 # variable set hash-table stats:
 # Load=69/1024=7%, Rehash=0, Collisions=2/93=2%
 
@@ -158,9 +158,9 @@ VSCODE_PID = 1157
 
 # Directories
 
-# . (device 16777224, inode 20251020): 17 files, no impossibilities.
+# . (device 16777221, inode 20251020): 22 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -174,7 +174,7 @@ postgres:
 #  File does not exist.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 2):
-	docker run --name some-postgres -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=aolin940118 -d postgres
+	docker run --name some-postgres --network bank-network -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres
 	
 
 # Not a target:
@@ -226,7 +226,7 @@ migrateforce:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-28 10:58:38
+#  Last modified 2022-07-04 14:50:51
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -296,10 +296,10 @@ migratedown:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
  
 make: *** No rule to make target `all'.  Stop.
 
+#  File has not been updated.
 #  commands to execute (from `Makefile', line 16):
 	migrate -path db/migration -database "postgres://root:aolin940118@localhost:5432/simple_bank?sslmode=disable" --verbose down
 	
@@ -326,6 +326,6 @@ mock:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Jul  4 10:08:47 2022
+# Finished Make data base on Tue Jul  5 10:04:03 2022
 
  
